@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
@@ -77,7 +78,7 @@ export default function Customer () {
   }
 
   if (!customer) return <Loading />;
-
+  
   return (
     <PageContainer title={`Cliente - ${customer.name}`}>
       <SectionTitle>
@@ -91,7 +92,6 @@ export default function Customer () {
           <Title>Nome:</Title>
           <Editable value={customer.name} onChange={updateName} />
         </Info>
-
         <Info>
           <Title>Telefone:</Title>
           <Editable
